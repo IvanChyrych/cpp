@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <!-- Event snippet for Интерактивные номера телефонов (1) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17541876128/qNzVCNucxacbEKCTz6xB',
+      'value': 1.0,
+      'currency': 'USD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
   <meta name="yandex-verification" content="17c38299b14b5f1f" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -180,7 +199,7 @@
   </form>
 
   <p style="text-align:center; margin-top:20px; font-size:1.1rem;">
-    <a href="tel:+375259152492" onclick="gtag('event', 'click_call_button', {event_category: 'contact', event_label: 'phone_click'});">
+    <a href="tel:+375259152492" onclick=gtag_report_conversion()>
       Позвонить
     </a>
 
