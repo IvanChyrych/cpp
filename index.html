@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <!-- Event snippet for Интерактивные номера телефонов (1) conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGSMF5VLC6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EGSMF5VLC6');  // GA4
+  gtag('config', 'AW-17541876128'); // Google Ads
+</script>
+
 <script>
 function gtag_report_conversion(url) {
   var callback = function () {
@@ -19,6 +27,9 @@ function gtag_report_conversion(url) {
   return false;
 }
 </script>
+
+
+
 
   <meta name="yandex-verification" content="17c38299b14b5f1f" />
   <meta charset="UTF-8">
@@ -199,9 +210,9 @@ function gtag_report_conversion(url) {
   </form>
 
   <p style="text-align:center; margin-top:20px; font-size:1.1rem;">
-    <a href="tel:+375259152492" onclick=gtag_report_conversion()>
-      Позвонить
-    </a>
+  <a href="tel:+375259152492" onclick="return gtag_report_conversion('tel:+375259152492')">
+    Позвонить
+  </a>
 
     <!-- <a href="https://t.me/TechnoComedy" target="_blank" style="margin:0 10px;">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" width="28" height="28" style="vertical-align:middle;">
