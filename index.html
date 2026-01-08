@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
-
-
-
-
-
-
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Создание и продвижение сайтов в Беларуси — Чирич Иван">
@@ -40,44 +32,45 @@
     footer {text-align: center; padding: 20px; background: #f3f4f6; margin-top: 40px;}
 
     .contact-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 25px;
-}
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 25px;
+    }
 
-.contact-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 22px;
-  border-radius: 30px;
-  font-size: 1.05rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 30px;
+      font-size: 1.05rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
 
-.contact-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
 
-/* Цвета кнопок */
-.contact-btn.phone {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-}
+    /* Цвета кнопок */
+    .contact-btn.phone {
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+    }
 
-.contact-btn.viber {
-  background: linear-gradient(135deg, #7c3aed, #5b21b6);
-}
+    .contact-btn.viber {
+      background: linear-gradient(135deg, #7c3aed, #5b21b6);
+    }
 
-.contact-btn.telegram {
-  background: linear-gradient(135deg, #38bdf8, #0284c7);
-}
+    .contact-btn.telegram {
+      background: linear-gradient(135deg, #38bdf8, #0284c7);
+    }
   </style>
 
 <!-- Объединенный тег: Google Analytics 4 + Google Ads -->
@@ -94,8 +87,6 @@
   gtag('config', '6-f63WF9XC6');
 </script>
 </head>
-
-
 
 <body>
 <header>
@@ -166,37 +157,31 @@
     </div>
 
     <div class="portfolio-item">
-
       <img src="./screenshots/texenergo.PNG" alt="1akb.by">
       <a href="https://texenergo.ru/" target="_blank">texenergo.ru</a>
     </div>
 
     <div class="portfolio-item">
-
       <img src="./screenshots/cargo.PNG" alt="1akb.by">
       <a href="https://cargo.link/" target="_blank">cargo.link</a>
     </div>
 
     <div class="portfolio-item">
-
       <img src="./screenshots/akkumulatory.PNG" alt="1akb.by">
       <a href="https://akkumulyatory.by/" target="_blank">akkumulyatory.by</a>
     </div>
 
     <div class="portfolio-item">
-
       <img src="./screenshots/hygger.PNG" alt="1akb.by">
       <a href="https://hygger.io/" target="_blank">hygger.io</a>
     </div>
 
     <div class="portfolio-item">
-
       <img src="./screenshots//meetvile.PNG" alt="1akb.by">
       <a href="https://meetville.com/" target="_blank">meetville.com</a>
     </div>
 
     <div class="portfolio-item">
-
       <img src="./screenshots/lpole.PNG" alt="1akb.by">
       <a href="https://lpole.ru/" target="_blank">lpole.ru</a>
     </div>
@@ -205,7 +190,6 @@
       <img src="./screenshots/it-academy.PNG" alt="it-academy.by">
       <a href="https://it-academy.by/" target="_blank">it-academy.by</a>
     </div>
-
   </div>
 </section>
 
@@ -231,30 +215,108 @@
   <h2>Контакты</h2>
   
   <div class="contact-buttons">
-  <a href="tel:+375259152492"
-   class="contact-btn phone"
-   onclick="gtag('event', 'phone_click', {
-     event_category: 'contact',
-     event_label: 'call_button'
-   });">
-  📞 Позвонить
-</a>
+    <a href="tel:+375259152492" class="contact-btn phone" id="phone-btn">
+      📞 Позвонить
+    </a>
 
+    <a href="viber://chat?number=%2B375259152492" class="contact-btn viber" id="viber-btn">
+      💜 Viber
+    </a>
 
-  <a href="viber://chat?number=%2B375259152492" class="contact-btn viber">
-    💜 Viber
-  </a>
-
-  <a href="https://t.me/TechnoComedy" target="_blank" class="contact-btn telegram">
-    ✈️ Telegram
-  </a>
-</div>
-
+    <a href="https://t.me/TechnoComedy" target="_blank" class="contact-btn telegram" id="telegram-btn">
+      ✈️ Telegram
+    </a>
+  </div>
 </section>
 
 <footer>
   <p>© 2025 Чирич Иван | Создание и продвижение сайтов в Беларуси</p>
 </footer>
+
+<script>
+  // Функция для добавления параметра к текущему URL
+  function addUrlParameter(param) {
+    const currentUrl = window.location.href;
+    const separator = currentUrl.includes('?') ? '&' : '?';
+    const newUrl = currentUrl + separator + param;
+    
+    // Изменяем URL в адресной строке без перезагрузки страницы
+    window.history.pushState({}, '', newUrl);
+  }
+
+  // Обработчики событий для кнопок
+  document.addEventListener('DOMContentLoaded', function() {
+    // Кнопка телефона
+    document.getElementById('phone-btn').addEventListener('click', function(e) {
+      e.preventDefault(); // Предотвращаем стандартное действие
+      
+      // Отправка события в Google Analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'phone_click', {
+          event_category: 'contact',
+          event_label: 'call_button'
+        });
+      }
+      
+      // Добавляем параметр к URL
+      addUrlParameter('tel');
+      
+      // Выполняем звонок
+      window.location.href = this.getAttribute('href');
+    });
+
+    // Кнопка Viber
+    document.getElementById('viber-btn').addEventListener('click', function(e) {
+      e.preventDefault(); // Предотвращаем стандартное действие
+      
+      // Добавляем параметр к URL
+      addUrlParameter('vb');
+      
+      // Открываем Viber
+      window.location.href = this.getAttribute('href');
+    });
+
+    // Кнопка Telegram
+    document.getElementById('telegram-btn').addEventListener('click', function(e) {
+      e.preventDefault(); // Предотвращаем стандартное действие
+      
+      // Добавляем параметр к URL
+      addUrlParameter('tg');
+      
+      // Открываем Telegram в новой вкладке
+      window.open(this.getAttribute('href'), '_blank');
+    });
+     // 💜 Viber
+    document.getElementById('viber-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'viber_click', {
+          event_category: 'contact',
+          event_label: 'viber_button'
+        });
+      }
+
+      addUrlParameter('vb');
+      window.location.href = this.getAttribute('href');
+    });
+
+    // ✈️ Telegram
+    document.getElementById('telegram-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'telegram_click', {
+          event_category: 'contact',
+          event_label: 'telegram_button'
+        });
+      }
+
+      addUrlParameter('tg');
+      window.open(this.getAttribute('href'), '_blank');
+    });
+  });
+</script>
 
 </body>
 </html>
