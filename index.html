@@ -44,6 +44,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     button:hover {background: #1e40af;}
 
     footer {text-align: center; padding: 20px; background: #f3f4f6; margin-top: 40px;}
+
+    .contact-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Цвета кнопок */
+.contact-btn.phone {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+.contact-btn.viber {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+}
+
+.contact-btn.telegram {
+  background: linear-gradient(135deg, #38bdf8, #0284c7);
+}
   </style>
 
 
@@ -191,18 +231,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button type="submit" style="padding:12px; border:none; border-radius:8px; background:#2563eb; color:#fff; font-weight:bold; cursor:pointer;">Отправить</button>
   </form>
 
-  <p style="text-align:center; margin-top:20px; font-size:1.1rem;">
+  <!-- <p style="text-align:center; margin-top:20px; font-size:1.1rem;">
     Позвонить:
-  <a href="tel:+375259152492" id="phone_button" >
-  +375259152492
+    <a href="tel:+375259152492" id="phone_button" >
+    +375259152492
+    </a>
+    <button href="tel:+375259152492" id="phone_button" >
+    Позвонить +375259152492
+    </buton> 
+  </p> -->
+
+  <div class="contact-buttons">
+  <a href="tel:+375259152492" class="contact-btn phone">
+    📞 Позвонить
   </a>
-  <!-- <button href="tel:+375259152492" id="phone_button" >
-  Позвонить +375259152492
-</buton> -->
 
+  <a href="viber://chat?number=%2B375259152492" class="contact-btn viber">
+    💜 Viber
+  </a>
 
+  <a href="https://t.me/TechnoComedy" target="_blank" class="contact-btn telegram">
+    ✈️ Telegram
+  </a>
+</div>
 
-  </p>
 </section>
 
 <footer>
