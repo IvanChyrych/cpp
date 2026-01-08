@@ -234,9 +234,15 @@
 
 
   <div class="contact-buttons">
-  <a href="tel:+375259152492" class="contact-btn phone">
-    📞 Позвонить
-  </a>
+  <a href="tel:+375259152492"
+   class="contact-btn phone"
+   onclick="gtag('event', 'phone_click', {
+     event_category: 'contact',
+     event_label: 'call_button'
+   });">
+  📞 Позвонить
+</a>
+
 
   <a href="viber://chat?number=%2B375259152492" class="contact-btn viber">
     💜 Viber
