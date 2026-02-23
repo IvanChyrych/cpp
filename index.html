@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KDNT7NWS');</script>
-<!-- End Google Tag Manager -->
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Создание и продвижение сайтов в Беларуси — Чирич Иван">
@@ -91,7 +82,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   // Google Analytics 4
   gtag('config', 'G-EGSMF5VLC6');
-  
+
   // Google Ads (ДОБАВЬТЕ ЭТУ СТРОКУ!)
   gtag('config', '6-f63WF9XC6');
 </script>
@@ -100,12 +91,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDNT7NWS"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  
 <header>
   <div style="display:flex; flex-direction:column; align-items:center; gap:20px;">
     <img src="photo_5343868159192592768_y.jpg" alt="Чирич Иван" style="width:180px; height:180px; object-fit:cover; border-radius:50%; box-shadow:0 4px 8px rgba(0,0,0,0.25);">
@@ -138,8 +123,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="card">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="48" height="48" style="display:block; margin: 0 auto 15px; color:#2563eb;">
-        <circle cx="12" cy="12" r="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12l2 2 4-4" />
+@@ -128,233 +128,233 @@
       </svg>
       <h3>Яндекс Директ</h3>
       <p>Эффективная реклама в Яндекс для привлечения клиентов.</p>
@@ -267,7 +251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section id="contact">
   <h2>Контакты</h2>
-  
+
   <div class="contact-buttons">
     <a href="tel:+375259152492" class="contact-btn phone" id="phone-btn">
       📞 Позвонить
@@ -293,7 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const currentUrl = window.location.href;
     const separator = currentUrl.includes('?') ? '&' : '?';
     const newUrl = currentUrl + separator + param;
-    
+
     // Изменяем URL в адресной строке без перезагрузки страницы
     window.history.pushState({}, '', newUrl);
   }
@@ -303,7 +287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Кнопка телефона
     document.getElementById('phone-btn').addEventListener('click', function(e) {
       e.preventDefault(); // Предотвращаем стандартное действие
-      
+
       // Отправка события в Google Analytics
       if (typeof gtag !== 'undefined') {
         gtag('event', 'phone_click', {
@@ -311,10 +295,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           event_label: 'call_button'
         });
       }
-      
+
       // Добавляем параметр к URL
       addUrlParameter('tel');
-      
+
       // Выполняем звонок
       window.location.href = this.getAttribute('href');
     });
@@ -322,10 +306,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Кнопка Viber
     document.getElementById('viber-btn').addEventListener('click', function(e) {
       e.preventDefault(); // Предотвращаем стандартное действие
-      
+
       // Добавляем параметр к URL
       addUrlParameter('vb');
-      
+
       // Открываем Viber
       window.location.href = this.getAttribute('href');
     });
@@ -333,10 +317,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Кнопка Telegram
     document.getElementById('telegram-btn').addEventListener('click', function(e) {
       e.preventDefault(); // Предотвращаем стандартное действие
-      
+
       // Добавляем параметр к URL
       addUrlParameter('tg');
-      
+
       // Открываем Telegram в новой вкладке
       window.open(this.getAttribute('href'), '_blank');
     });
@@ -373,4 +357,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
 
 </body>
-</html>
