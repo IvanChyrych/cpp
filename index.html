@@ -73,19 +73,13 @@
     }
   </style>
 
-<!-- Объединенный тег: Google Analytics 4 + Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGSMF5VLC6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  // Google Analytics 4
-  gtag('config', 'G-EGSMF5VLC6');
-
-  // Google Ads (ДОБАВЬТЕ ЭТУ СТРОКУ!)
-  gtag('config', '6-f63WF9XC6');
-</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSVJM7JW');</script>
+<!-- End Google Tag Manager -->
 
 <link rel="icon" type="image/png" sizes="32x32" href="../cpp/favicon-32x32.jpg">
 </head>
@@ -261,7 +255,7 @@
       💜 Viber
     </a>
 
-    <a href="https://t.me/TechnoComedy" target="_blank" class="contact-btn telegram" id="telegram-btn">
+    <a href="https://t.me/ivanchyrychppc" target="_blank" class="contact-btn telegram" id="telegram-btn">
       ✈️ Telegram
     </a>
   </div>
@@ -271,89 +265,9 @@
   <p>© 2025 Чирич Иван | Создание и продвижение сайтов в Беларуси</p>
 </footer>
 
-<script>
-  // Функция для добавления параметра к текущему URL
-  function addUrlParameter(param) {
-    const currentUrl = window.location.href;
-    const separator = currentUrl.includes('?') ? '&' : '?';
-    const newUrl = currentUrl + separator + param;
-
-    // Изменяем URL в адресной строке без перезагрузки страницы
-    window.history.pushState({}, '', newUrl);
-  }
-
-  // Обработчики событий для кнопок
-  document.addEventListener('DOMContentLoaded', function() {
-    // Кнопка телефона
-    document.getElementById('phone-btn').addEventListener('click', function(e) {
-      e.preventDefault(); // Предотвращаем стандартное действие
-
-      // Отправка события в Google Analytics
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'phone_click', {
-          event_category: 'contact',
-          event_label: 'call_button'
-        });
-      }
-
-      // Добавляем параметр к URL
-      addUrlParameter('tel');
-
-      // Выполняем звонок
-      window.location.href = this.getAttribute('href');
-    });
-
-    // Кнопка Viber
-    document.getElementById('viber-btn').addEventListener('click', function(e) {
-      e.preventDefault(); // Предотвращаем стандартное действие
-
-      // Добавляем параметр к URL
-      addUrlParameter('vb');
-
-      // Открываем Viber
-      window.location.href = this.getAttribute('href');
-    });
-
-    // Кнопка Telegram
-    document.getElementById('telegram-btn').addEventListener('click', function(e) {
-      e.preventDefault(); // Предотвращаем стандартное действие
-
-      // Добавляем параметр к URL
-      addUrlParameter('tg');
-
-      // Открываем Telegram в новой вкладке
-      window.open(this.getAttribute('href'), '_blank');
-    });
-     // 💜 Viber
-    document.getElementById('viber-btn').addEventListener('click', function(e) {
-      e.preventDefault();
-
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'viber_click', {
-          event_category: 'contact',
-          event_label: 'viber_button'
-        });
-      }
-
-      addUrlParameter('vb');
-      window.location.href = this.getAttribute('href');
-    });
-
-    // ✈️ Telegram
-    document.getElementById('telegram-btn').addEventListener('click', function(e) {
-      e.preventDefault();
-
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'telegram_click', {
-          event_category: 'contact',
-          event_label: 'telegram_button'
-        });
-      }
-
-      addUrlParameter('tg');
-      window.open(this.getAttribute('href'), '_blank');
-    });
-  });
-</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSVJM7JW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 </body>
